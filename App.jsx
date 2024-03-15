@@ -18,13 +18,16 @@ function App() {
       'Go to gym',
       'Walk dog'
     ]);
+    const handleAddTask = (task) =>{
+      setTasks([...tasks,task]);
+    }
+
   return (
     <SafeAreaView>
     <ToDoList tasks={tasks} />
-    <ToDoForm />
+    <ToDoForm addTask={handleAddTask} />
     </SafeAreaView>
   );
 }
-
 
 export default App;
